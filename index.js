@@ -18,3 +18,23 @@ const DayOfWeek = () => {
     return (Math.floor(day));
 }
 
+const GetGender = () => {
+    var gender;
+    var selectedGender = document.querySelector('input[name="gender"]:checked').value;
+    
+    if(selectedGender == "male") {
+        gender = "male";
+    } else {
+        gender = "female";
+    }
+
+    console.log(gender);
+
+}
+
+const GetYourAkan = () => {
+    var dayOfWeek = DayOfWeek();
+    GetGender();
+
+
+}
