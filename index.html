@@ -11,6 +11,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
     </head>
     <body>
         <div class="container">
@@ -25,7 +26,54 @@
 
             <div id="userInputs">
                 
+                <div>
+                    <form>
+                        <div class="row">
+                            <label for="century">Enter Century of Birth(e.g 14,16,19):</label>
+                            <input type="text" name="century" class="dateInput" value="" id="century">
+                            <br>
+                            <label for="year"> Enter Year of Birth (e.g 96,00,20):</label>
+                            <input type="text" name="year" class="dateInput" value="" id="year">
+                            <br>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label for="month">Enter Month of Birth</label>
+                            <input type="text" class="dateInput" name="month" value="" id="month">
+                            <br>
+                            <label for="dateOfBirth">Enter Date of Birth</label>
+                            <input type="text" class="dateInput" name="dateOfBirth" value="" id="date"><br>
+                            <div>
+                                <p>Select a gender:</p>
+                    
+                                <div>
+                                    <input type="radio" id="male" name="gender" value="male" checked>
+                                    <label for="male">Male</label>
+                                </div>
+                    
+                                <div>
+                                    <input type="radio" id="subtract" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                </div><br />
+                            </div>
+                        </div>
+                        <p><input type="button" Value="Submit" onclick="DayOfWeek();">    <input Type="reset" Value="Reset"></p>
+            
+    
+                        <p>Weekday:<h1 id="weekday"></h1>
+                        </p>
+                        <p>Akan name:<h1 id="akan"></h1>
+                        </p>
+                        <br>
+                    </form>
+                </div>
+              
+                <!--<button type="button" id="btn">Check it</button>-->
+                
             </div>
         </div>        
     </body>
+
+        <!--Script js-->
+        <script src="./index.js"></script>
 </html>
