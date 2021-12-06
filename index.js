@@ -9,7 +9,7 @@ var femaleAkanNames = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afua", "Ama"]
 // Validation
 const DateValidation = () => {
     if (DD == null || DD < 1 || DD > 31 || DD == undefined) {
-        alert("Invalid Date");
+        alert("Invalid Date Input");
         document.getElementById('date').value = null;
         document.getElementById('date').style.border = ("1px solid red");
         return false;
@@ -22,7 +22,7 @@ const DateValidation = () => {
 
 const MonthValidation = () => {
     if (MM == null || MM < 1 || MM > 12 || MM == undefined) {
-        alert("Invalid Date");
+        alert("Invalid Month Input");
         document.getElementById('month').value = null;
         document.getElementById('month').style.border = ("1px solid red");
         return false;
