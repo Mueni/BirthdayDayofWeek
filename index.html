@@ -16,10 +16,10 @@
     <body>
         <div class="container">
             <div id="intro">
-                <h5>Hey wanna know which day of the week you were born, We gatch you!!! </h5>
-                <h6>Just input your date of birth below and to make it a little more fun your gender so that we can give you an Akan Name</h6>
+                <h5 class="header">Hey wanna know which day of the week you were born, We gatch you!!! </h5>
+                <h6 class="subHeader">Just input your date of birth below and to make it a little more fun your gender so that we can give you an Akan Name</h6>
                 <p>
-                    <strong>Akan names</strong>are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.
+                    <strong>Akan names </strong>are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.
                 </p>
     
             </div>
@@ -29,33 +29,37 @@
                 <div>
                     <form>
                         <div class="row">
-                            <label for="century">Enter Century of Birth(e.g 14,16,19):</label>
-                            <input type="text" name="century" class="dateInput" value="" id="century">
-                            <br>
+                            <label for="century">Enter Century of Birth(e.g 16,19):</label>
+                            <input type="number" name="century" class="dateInput" value="" id="century" min="16" max="20">
+                            <br />
+                            
                             <label for="year"> Enter Year of Birth (e.g 96,00,20):</label>
-                            <input type="text" name="year" class="dateInput" value="" id="year">
-                            <br>
+                            <input type="number" name="year" class="dateInput" value="" id="year" min="00" max="99">
+                            <br />
                         </div>
                         <br>
                         <div class="row">
                             <label for="month">Enter Month of Birth</label>
-                            <input type="text" class="dateInput" name="month" value="" id="month">
-                            <br>
+                            <input type="number" class="dateInput" name="month" value="" id="month" min="1" max="31">
+                            <br/>
+
                             <label for="dateOfBirth">Enter Date of Birth</label>
-                            <input type="text" class="dateInput" name="dateOfBirth" value="" id="date"><br>
+                            <input type="number" class="dateInput" name="dateOfBirth" value="" id="date" min="1" max="12">
+                          
+                        </div>
+                        <br />
+                        <div>
+                            <p>Select a gender:</p>
+                
                             <div>
-                                <p>Select a gender:</p>
-                    
-                                <div>
-                                    <input type="radio" id="male" name="gender" value="male" checked>
-                                    <label for="male">Male</label>
-                                </div>
-                    
-                                <div>
-                                    <input type="radio" id="subtract" name="gender" value="female">
-                                    <label for="female">Female</label>
-                                </div><br />
+                                <input type="radio" id="male" name="gender" value="male" checked>
+                                <label for="male">Male</label>
                             </div>
+                
+                            <div>
+                                <input type="radio" id="subtract" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div><br />
                         </div>
                         <p><input type="button" Value="Submit" onclick="GetYourAkan();">    <input Type="reset" Value="Reset"></p>
             
