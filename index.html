@@ -28,7 +28,7 @@
                 
                 <div>
                     <form>
-                        <div class="row">
+                       <!--  <div class="row">
                             <label for="century">Enter Century of Birth(e.g 16,19):</label>
                             <input type="number" name="century" class="dateInput" value="" id="century" min="16" max="20">
                             <br />
@@ -37,8 +37,8 @@
                             <input type="number" name="year" class="dateInput" value="" id="year" min="00" max="99">
                             <br />
                         </div>
-                        <br>
-                        <div class="row">
+                        <br> -->
+                        <!-- <div class="row">
                             <label for="month">Enter Month of Birth</label>
                             <input type="number" class="dateInput" name="month" value="" id="month" min="1" max="31">
                             <br/>
@@ -46,6 +46,11 @@
                             <label for="dateOfBirth">Enter Date of Birth</label>
                             <input type="number" class="dateInput" name="dateOfBirth" value="" id="date" min="1" max="12">
                           
+                        </div> -->
+                        <div class="row">
+                            <label for="date">Enter Date of Birth</label>
+                            <input type="date" class="dateInput" name="date" value="" id="dateOfBirth">
+                            <br/>
                         </div>
                         <br />
                         <div>
@@ -61,7 +66,7 @@
                                 <label for="female">Female</label>
                             </div><br />
                         </div>
-                        <p><input type="button" Value="Submit" onclick="GetYourAkan();">    <input Type="reset" Value="Reset"></p>
+                        <p><input type="button" Value="Submit" onclick="GetYourAkan2();">    <input Type="reset" Value="Reset"></p>
             
     
                         <p>You were born on a:<h5 id="bornDay"></h5>

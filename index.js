@@ -54,6 +54,8 @@ const DayOfWeek = () => {
         return false
     }
 
+
+
 }
 
 //gender Function
@@ -70,7 +72,7 @@ const GetGender = () => {
 
 }
 
-
+// Very shaky
 const GetYourAkan = () => {
     var dayOfWeek = DayOfWeek();
     GetGender();
@@ -82,6 +84,37 @@ const GetYourAkan = () => {
 
     //comparing days and gender to assign akan names
     if(dayOfWeek == undefined || dayOfWeek == null || dayOfWeek == false) {
+        document.getElementById("bornDay").innerHTML = null;
+        document.getElementById("akanName").innerHTML = "Not able to show akan name now kindly check if fields are filled correctly"
+    }
+    else {
+        if(gender == "female") {
+            document.getElementById("bornDay").innerHTML = bornDay;
+            document.getElementById("akanName").innerHTML = femaleName;
+        } else {
+            document.getElementById("bornDay").innerHTML = bornDay;
+            document.getElementById("akanName").innerHTML = maleName; 
+        }
+    }
+
+
+}
+
+// works well
+const GetYourAkan2 = () => {
+
+    var dayOfBirth = document.getElementById("dateOfBirth").value;
+    var dateOfBirth = new Date(dayOfBirth);
+    var dayOfTheWeek = dateOfBirth.getDay();
+    GetGender();
+
+    var maleName = maleAkanNames[dayOfTheWeek];
+    var bornDay = Days[dayOfTheWeek];
+
+    var femaleName = femaleAkanNames[dayOfTheWeek];
+
+    //comparing days and gender to assign akan names
+    if(dayOfBirth == undefined || dayOfBirth == null || dayOfBirth == false) {
         document.getElementById("bornDay").innerHTML = null;
         document.getElementById("akanName").innerHTML = "Not able to show akan name now kindly check if fields are filled correctly"
     }
